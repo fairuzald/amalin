@@ -1,4 +1,4 @@
-import { palette } from '@/theme/colors';
+import { palette } from '@/themes/colors';
 import { useState } from 'react';
 import { Image, ImageStyle, StyleSheet, TextStyle, View, ViewStyle } from 'react-native';
 import { Typography } from '../typography';

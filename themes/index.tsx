@@ -6,10 +6,10 @@ import Spacing from './spacing';
 import Typography from './typography';
 
 const theme = {
-  colors: Colors,
-  spacing: Spacing,
-  typography: Typography,
-  shadows: Shadows,
+  Colors,
+  Spacing,
+  Typography,
+  Shadows,
 };
 
 const ThemeContext = createContext(theme);
@@ -19,11 +19,6 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   const value = {
     ...theme,
-    colors: {
-      light: Colors.light,
-      dark: Colors.dark,
-      ...Colors[colorScheme],
-    },
     isDark: colorScheme === 'dark',
   };
 
@@ -31,3 +26,8 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 };
 
 export const useTheme = () => useContext(ThemeContext);
+
+export * from './colors';
+export * from './shadows';
+export * from './spacing';
+export * from './typography';

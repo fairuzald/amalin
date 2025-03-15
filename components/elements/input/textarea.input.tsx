@@ -1,24 +1,32 @@
 import React, { useState } from 'react';
 import {
   NativeSyntheticEvent,
+  TextInput as RNTextInput,
   StyleSheet,
-  TextInput,
   TextInputFocusEventData,
   TextStyle,
   View,
   ViewStyle,
 } from 'react-native';
-import { palette } from '../../../theme/colors';
+import { palette } from '../../../themes/colors';
 import { Typography } from '../typography';
+import { BaseInputProps } from './base.input.props';
 import {
   inputContainerVariantPresets,
   inputSizePresets,
   inputStatePresets,
   inputTextSizePresets,
 } from './input.presets';
-import { InputProps } from './input.props';
 
-export function Input({
+export interface TextAreaProps extends BaseInputProps {
+  placeholder?: string;
+  value?: string;
+  numberOfLines?: number;
+  maxLength?: number;
+  autoCapitalize?: 'none' | 'sentences' | 'words' | 'characters';
+}
+
+export function TextArea({
   variant = 'outlined',
   size = 'medium',
   label,
@@ -32,29 +40,46 @@ export function Input({
   rightIcon,
   disabled = false,
   testID,
+  onChangeText,
+  value,
+  numberOfLines = 4,
+  onFocus,
+  onBlur,
   ...rest
-}: InputProps) {
+}: TextAreaProps) {
   const [isFocused, setIsFocused] = useState(false);
 
   const handleFocus = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
     setIsFocused(true);
-    rest.onFocus?.(e);
+    onFocus?.(e);
   };
 
   const handleBlur = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
     setIsFocused(false);
-    rest.onBlur?.(e);
+    onBlur?.(e);
   };
+
+  const handleChangeText = (text: string) => {
+    onChangeText?.(text);
+  };
+
   const containerStyles = [
-    inputContainerVariantPresets[variant],
+    BASE_VIEW_INPUT,
+    inputContainerVariantPresets[variant as 'outlined' | 'filled'],
     inputSizePresets[size],
+    { minHeight: numberOfLines * 24 }, // Estimate line height
     isFocused && inputStatePresets.focused,
     error && inputStatePresets.error,
     disabled && inputStatePresets.disabled,
     inputContainerStyle,
   ];
 
-  const textStyles = [BASE_INPUT, inputTextSizePresets[size], inputStyle];
+  const textStyles = [
+    BASE_INPUT,
+    inputTextSizePresets[size],
+    { textAlignVertical: 'top' as 'auto' | 'center' | 'top' | 'bottom' | undefined },
+    inputStyle,
+  ];
 
   const helperTextStyle = StyleSheet.flatten([BASE_HELPER_TEXT, error ? ERROR_TEXT : null]);
 
@@ -67,11 +92,15 @@ export function Input({
       <View style={containerStyles}>
         {leftIcon && <View style={ICON_CONTAINER}>{leftIcon}</View>}
 
-        <TextInput
+        <RNTextInput
           style={textStyles}
           placeholderTextColor={palette.gray.medium}
           onFocus={handleFocus}
           onBlur={handleBlur}
+          onChangeText={handleChangeText}
+          value={value}
+          multiline={true}
+          numberOfLines={numberOfLines}
           editable={!disabled}
           {...rest}
         />
@@ -102,10 +131,15 @@ const BASE_INPUT: TextStyle = {
   paddingVertical: 12,
 };
 
+const BASE_VIEW_INPUT: ViewStyle = {
+  display: 'flex',
+  flexDirection: 'row',
+};
+
 const ICON_CONTAINER: ViewStyle = {
   paddingHorizontal: 12,
-  justifyContent: 'center',
   alignItems: 'center',
+  paddingTop: 12, // Align icon with first line of text
 };
 
 const BASE_HELPER_TEXT: TextStyle = {

@@ -11,6 +11,7 @@
     "openapi-ts": "openapi-ts"
   },
   "dependencies": {
+    "@expo/metro-runtime": "~4.0.1",
     "@expo/vector-icons": "^14.0.2",
     "@hey-api/client-axios": "^0.6.2",
     "@hey-api/client-fetch": "^0.8.3",
@@ -30,6 +31,7 @@
     "expo-status-bar": "~2.0.1",
     "expo-system-ui": "^4.0.8",
     "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-hook-form": "^7.54.2",
     "react-native": "0.76.7",
     "react-native-calendars": "^1.1310.0",
@@ -39,6 +41,7 @@
     "react-native-tab-view": "^4.0.5",
     "react-native-toast-message": "^2.2.1",
     "react-native-vector-icons": "^10.2.0",
+    "react-native-web": "~0.19.13",
     "yup": "^1.6.1",
     "zod": "^3.24.2",
     "zustand": "^5.0.3"

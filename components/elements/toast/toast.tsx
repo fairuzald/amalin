@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Toast, { ToastConfig, ToastConfigParams } from 'react-native-toast-message';
-import { palette } from '../../../theme/colors';
+import { palette } from '../../../themes/colors';
 
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
 

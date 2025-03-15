@@ -1,37 +1,26 @@
-import React from 'react';
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
-import { Route } from 'react-native-tab-view';
+import { TabVariant } from './tabs.presets';
 
-export interface TabRoute extends Route {
+export interface TabRoute {
   key: string;
   title: string;
   component: React.ComponentType<any>;
   props?: Record<string, any>;
 }
 
-export interface TabsProps {
+export interface TabSelectorProps {
   /**
-   * List of tab routes to display
+   * Array of tab routes
    */
   routes: TabRoute[];
 
   /**
-   * Initial active tab index
-   */
-  initialIndex?: number;
-
-  /**
-   * Key of initial tab to display
+   * Key of initially active tab
    */
   initialKey?: string;
 
   /**
    * Callback when tab changes
-   */
-  onIndexChange?: (index: number) => void;
-
-  /**
-   * Callback when tab changes - provides key
    */
   onTabChange?: (key: string) => void;
 
@@ -41,47 +30,42 @@ export interface TabsProps {
   primaryColor?: string;
 
   /**
-   * Whether to use swipe gestures
+   * Tab variant style
    */
-  swipeEnabled?: boolean;
+  variant?: TabVariant;
 
   /**
-   * Whether to animate tab transitions
-   */
-  animationEnabled?: boolean;
-
-  /**
-   * Whether tabs should take full height
-   */
-  fullHeight?: boolean;
-
-  /**
-   * Custom styles for the tab bar
-   */
-  tabBarStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Custom styles for the tab label
-   */
-  tabLabelStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Custom styles for the active tab label
-   */
-  activeTabLabelStyle?: StyleProp<TextStyle>;
-
-  /**
-   * Custom styles for the tab indicator
-   */
-  indicatorStyle?: StyleProp<ViewStyle>;
-
-  /**
-   * Custom style for the entire tab view
+   * Additional style for the container
    */
   style?: StyleProp<ViewStyle>;
 
   /**
-   * Optional test ID
+   * Additional style for the tab bar
+   */
+  tabBarStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Additional style for tab items
+   */
+  tabItemStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Additional style for tab text
+   */
+  tabTextStyle?: StyleProp<TextStyle>;
+
+  /**
+   * Additional style for active tab
+   */
+  activeTabStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Additional style for active tab text
+   */
+  activeTabTextStyle?: StyleProp<TextStyle>;
+
+  /**
+   * TestID for testing
    */
   testID?: string;
 }

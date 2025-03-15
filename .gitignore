@@ -34,3 +34,11 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+out

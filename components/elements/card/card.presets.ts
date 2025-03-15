@@ -1,6 +1,6 @@
 import { ViewStyle } from 'react-native';
-import { palette } from '../../../theme/colors';
-import { shadows } from '../../../theme/shadows';
+import { palette } from '../../../themes/colors';
+import { shadows } from '../../../themes/shadows';
 
 /**
  * Card variant presets
@@ -24,7 +24,7 @@ export const cardVariantPresets: Record<CardVariant, ViewStyle> = {
     backgroundColor: palette.white,
     borderRadius: 16,
     padding: 16,
-    ...shadows.medium,
+    ...shadows.small,
   },
 };
 

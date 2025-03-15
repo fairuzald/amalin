@@ -32,6 +32,11 @@ export const palette = {
   },
   white: '#FFFFFF',
   black: '#000000',
+  shadows: {
+    light: 'rgba(0, 0, 0, 0.1)',
+    medium: 'rgba(0, 0, 0, 0.2)',
+    heavy: 'rgba(0, 0, 0, 0.3)',
+  },
 };
 
 export default {

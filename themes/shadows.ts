@@ -1,5 +1,5 @@
 import { Platform } from 'react-native';
-import Colors from './colors';
+import { palette } from './colors';
 
 export const shadows = {
   none: {
@@ -14,7 +14,7 @@ export const shadows = {
   small: {
     ...Platform.select({
       ios: {
-        shadowColor: Colors.light.shadow,
+        shadowColor: palette.shadows.light,
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.15,
         shadowRadius: 2,
@@ -29,7 +29,7 @@ export const shadows = {
   medium: {
     ...Platform.select({
       ios: {
-        shadowColor: Colors.light.shadow,
+        shadowColor: palette.shadows.light,
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 4,
@@ -44,7 +44,7 @@ export const shadows = {
   large: {
     ...Platform.select({
       ios: {
-        shadowColor: Colors.light.shadow,
+        shadowColor: palette.shadows.light,
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.25,
         shadowRadius: 8,
@@ -59,7 +59,7 @@ export const shadows = {
   xl: {
     ...Platform.select({
       ios: {
-        shadowColor: Colors.light.shadow,
+        shadowColor: palette.shadows.light,
         shadowOffset: { width: 0, height: 8 },
         shadowOpacity: 0.3,
         shadowRadius: 16,

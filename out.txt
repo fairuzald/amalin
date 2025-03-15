@@ -1,0 +1,182 @@
+.
+├── api
+│   ├── client.gen.ts
+│   ├── index.ts
+│   ├── sdk.gen.ts
+│   ├── @tanstack
+│   │   └── react-query.gen.ts
+│   ├── transformers.gen.ts
+│   ├── types.gen.ts
+│   └── zod.gen.ts
+├── app.json
+├── App.tsx
+├── components
+│   └── elements
+│       ├── alert-confirmation
+│       │   ├── alert.presets.ts
+│       │   ├── alert.props.ts
+│       │   ├── alert.service.tsx
+│       │   ├── alert.tsx
+│       │   └── index.ts
+│       ├── avatar
+│       │   ├── avatar.presets.ts
+│       │   ├── avatar.props.ts
+│       │   ├── avatar.tsx
+│       │   └── index.ts
+│       ├── badge
+│       │   ├── badge.presets.ts
+│       │   ├── badge.props.ts
+│       │   ├── badge.tsx
+│       │   └── index.ts
+│       ├── button
+│       │   ├── button.presets.ts
+│       │   ├── button.props.ts
+│       │   ├── button.tsx
+│       │   └── index.ts
+│       ├── card
+│       │   ├── card.presets.ts
+│       │   ├── card.props.ts
+│       │   ├── card.tsx
+│       │   └── index.ts
+│       ├── checkbox
+│       │   ├── checkbox.presets.ts
+│       │   ├── checkbox.props.ts
+│       │   ├── checkbox.tsx
+│       │   └── index.ts
+│       ├── dialog
+│       │   ├── dialog.presets.ts
+│       │   ├── dialog.props.ts
+│       │   ├── dialog.tsx
+│       │   └── index.ts
+│       ├── input
+│       │   ├── index.ts
+│       │   ├── input.presets.ts
+│       │   ├── input.props.ts
+│       │   └── input.tsx
+│       ├── loader
+│       │   ├── index.ts
+│       │   ├── loader.presets.ts
+│       │   ├── loader.props.ts
+│       │   └── loader.tsx
+│       ├── tabs
+│       │   ├── index.ts
+│       │   ├── tabs.props.ts
+│       │   └── tabs.tsx
+│       ├── toast
+│       │   ├── index.ts
+│       │   └── toast.tsx
+│       └── typography
+│           ├── index.ts
+│           ├── typography.presets.ts
+│           ├── typography.props.ts
+│           └── typography.tsx
+├── eas.json
+├── .env
+├── .eslintrc.js
+├── .expo
+│   ├── devices.json
+│   └── README.md
+├── flatten.sh
+├── .gitignore
+├── hooks
+│   └── .gitkeep
+├── index.ts
+├── __mocks__
+│   └── mockData.ts
+├── navigation
+│   └── index.tsx
+├── openapi-ts.config.ts
+├── out
+│   ├── adaptive-icon.png
+│   ├── alert.presets.ts
+│   ├── alert.props.ts
+│   ├── alert.service.tsx
+│   ├── alert.tsx
+│   ├── app.json
+│   ├── App.tsx
+│   ├── auth.store.ts
+│   ├── avatar.presets.ts
+│   ├── avatar.props.ts
+│   ├── avatar.tsx
+│   ├── badge.presets.ts
+│   ├── badge.props.ts
+│   ├── badge.tsx
+│   ├── button.presets.ts
+│   ├── button.props.ts
+│   ├── button.tsx
+│   ├── card.presets.ts
+│   ├── card.props.ts
+│   ├── card.tsx
+│   ├── checkbox.presets.ts
+│   ├── checkbox.props.ts
+│   ├── checkbox.tsx
+│   ├── client.gen.ts
+│   ├── colors.ts
+│   ├── DevConsole.ts
+│   ├── devices.json
+│   ├── dialog.presets.ts
+│   ├── dialog.props.ts
+│   ├── dialog.tsx
+│   ├── eas.json
+│   ├── .eslintrc.js
+│   ├── favicon.png
+│   ├── flatten.sh
+│   ├── .gitignore
+│   ├── .gitkeep
+│   ├── icon.png
+│   ├── index.ts
+│   ├── index.tsx
+│   ├── input.presets.ts
+│   ├── input.props.ts
+│   ├── input.tsx
+│   ├── loader.presets.ts
+│   ├── loader.props.ts
+│   ├── loader.tsx
+│   ├── mockData.ts
+│   ├── openapi-ts.config.ts
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── .prettierrc
+│   ├── react-query.gen.ts
+│   ├── README.md
+│   ├── RegisterScreen.tsx
+│   ├── sdk.gen.ts
+│   ├── shadows.ts
+│   ├── SpaceMono-Regular.ttf
+│   ├── spacing.ts
+│   ├── splash-icon.png
+│   ├── tabs.props.ts
+│   ├── tabs.tsx
+│   ├── toast.tsx
+│   ├── transformers.gen.ts
+│   ├── tsconfig.json
+│   ├── types.gen.ts
+│   ├── typography.presets.ts
+│   ├── typography.props.ts
+│   ├── typography.ts
+│   ├── typography.tsx
+│   ├── yarn.lock
+│   └── zod.gen.ts
+├── out.txt
+├── package.json
+├── package-lock.json
+├── .prettierrc
+├── screens
+│   └── RegisterScreen.tsx
+├── store
+│   ├── auth.store.ts
+│   └── index.ts
+├── theme
+│   ├── colors.ts
+│   ├── index.tsx
+│   ├── shadows.ts
+│   ├── spacing.ts
+│   └── typography.ts
+├── tsconfig.json
+├── types
+│   └── index.ts
+├── utils
+│   └── DevConsole.ts
+└── yarn.lock
+
+27 directories, 153 files

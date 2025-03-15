@@ -1,6 +1,6 @@
 import { AlertProvider } from '@/components/elements/alert-confirmation';
 import RegisterScreen from '@/screens/RegisterScreen';
-import colors from '@/theme/colors';
+import { palette } from '@/themes';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -19,7 +19,7 @@ export default function Navigation() {
           initialRouteName={isAuthenticated ? 'Main' : 'Register'}
           screenOptions={{
             headerStyle: {
-              backgroundColor: colors.light.primary,
+              backgroundColor: palette.blue.primary,
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -27,7 +27,7 @@ export default function Navigation() {
             },
             headerShadowVisible: false,
             contentStyle: {
-              backgroundColor: colors.light.background,
+              backgroundColor: palette.gray.lightest,
             },
           }}
         >

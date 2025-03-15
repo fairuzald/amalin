@@ -15,6 +15,7 @@ export type RegisterUserData = {
     email: string;
     password: string;
     password_confirmation: string;
+    telephone?: string;
   };
   path?: never;
   query?: never;

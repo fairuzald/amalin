@@ -1,5 +1,5 @@
 import { TextStyle, ViewStyle } from 'react-native';
-import { palette } from '../../../theme/colors';
+import { palette } from '../../../themes/colors';
 
 /**
  * Avatar size presets

@@ -1,4 +1,4 @@
-import { palette } from '../../../theme/colors';
+import { palette } from '../../../themes/colors';
 
 /**
  * Loader size presets

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { TextProps, TextStyle } from 'react-native';
+import { TextProps } from 'react-native';
 import { TypographyColor, TypographyVariant } from './typography.presets';
 
 export interface TypographyProps extends TextProps {
@@ -17,11 +17,6 @@ export interface TypographyProps extends TextProps {
    * Text color
    */
   color?: TypographyColor;
-
-  /**
-   * Additional styling for the text
-   */
-  style?: TextStyle | TextStyle[];
 
   /**
    * Number of lines before truncating

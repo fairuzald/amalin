@@ -1,5 +1,5 @@
 import { TextStyle } from 'react-native';
-import { palette } from '../../../theme/colors';
+import { palette } from '../../../themes/colors';
 
 /**
  * Typography variant presets

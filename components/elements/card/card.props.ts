@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
-import { ViewStyle } from 'react-native';
+import { ViewProps } from 'react-native';
 import { CardSize, CardVariant } from './card.presets';
 
-export interface CardProps {
+export interface CardProps extends ViewProps {
   /**
    * Card content
    */
@@ -17,11 +17,6 @@ export interface CardProps {
    * Card size (affects padding)
    */
   size?: CardSize;
-
-  /**
-   * Additional styling for the card
-   */
-  style?: ViewStyle;
 
   /**
    * Whether the card is pressable

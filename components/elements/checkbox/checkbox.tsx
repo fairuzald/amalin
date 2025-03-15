@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, TextStyle, TouchableOpacity, View, ViewStyle } from 'react-native';
-import { palette } from '../../../theme/colors';
+import { palette } from '../../../themes/colors';
 import { Typography } from '../typography';
 import { checkboxSizePresets, checkboxVariantPresets } from './checkbox.presets';
 import { CheckboxProps } from './checkbox.props';

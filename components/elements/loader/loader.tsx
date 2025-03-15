@@ -1,5 +1,5 @@
 import { ActivityIndicator, StyleSheet, TextStyle, View, ViewStyle } from 'react-native';
-import { palette } from '../../../theme/colors';
+import { palette } from '../../../themes/colors';
 import { Typography } from '../typography';
 import { loaderColorPresets, loaderSizePresets } from './loader.presets';
 import { LoaderProps } from './loader.props';

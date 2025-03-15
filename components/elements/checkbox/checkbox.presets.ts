@@ -1,5 +1,5 @@
 import { ViewStyle } from 'react-native';
-import { palette } from '../../../theme/colors';
+import { palette } from '../../../themes/colors';
 
 /**
  * Checkbox size presets
